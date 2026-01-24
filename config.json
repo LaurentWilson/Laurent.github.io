@@ -1,6 +1,12 @@
 {
     "title":"Blog Title",
     "subTitle":"Blog description",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
+    "avatarUrl":"https://raw.githubusercontent.com/LaurentWilson/Laurent_Figurebed/main/img/20260124202221288.JPG",
+    "GMEEK_VERSION":"last",
+    "startSite":"01/24/2026",
+    "singlePage":["about"],
+    "singlePage":["link"],
+    "i18n":"CN",
+    "UTC":8,
+    "bottomText":"😘"
 }
