@@ -1,7 +1,7 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
-    "avatarUrl":"https://raw.githubusercontent.com/LaurentWilson/Laurent_Figurebed/main/img/20260124202221288.JPG",
+    "title":"Laurent 的麻辣咖啡",
+    "subTitle":"在这里猛猛给自己充电⚡️⚡️⚡️",
+    "avatarUrl":"https://upload.cc/i1/2026/01/24/J7qTkQ.jpg",
     "GMEEK_VERSION":"last",
     "startSite":"01/24/2026",
     "singlePage":["about"],
@@ -11,5 +11,5 @@
     "themeMode":"manual",
     "dayTheme":"light",
     "nightTheme":"dark_colorblind",
-    "bottomText":"爱你哟😘"
+    "bottomText":"你才是给我充满电的那位！😘"
 }
