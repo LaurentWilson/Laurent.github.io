@@ -8,5 +8,8 @@
     "singlePage":["link"],
     "i18n":"CN",
     "UTC":8,
-    "bottomText":"😘"
+    "themeMode":"manual",
+    "dayTheme":"light",
+    "nightTheme":"dark_colorblind",
+    "bottomText":"爱你哟😘"
 }
