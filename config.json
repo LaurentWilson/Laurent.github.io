@@ -14,8 +14,8 @@
     "showPostSource":0,
     "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
-    "indexStyle":"<link href='/index.css' rel='stylesheet' />",
-    "style":"<link href='/post.css' rel='stylesheet' />",
+    "indexStyle":"<link href='https://github.com/LaurentWilson/Laurent.github.io/blob/main/index.css' rel='stylesheet' />",
+    "style":"<link href='https://github.com/LaurentWilson/Laurent.github.io/blob/main/post.css' rel='stylesheet' />",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "bottomText":"你才是给我充满电的那位！😘"
 }
