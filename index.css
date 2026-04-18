@@ -69,7 +69,7 @@ body {
 /* 副标题 */
 .title-left::after {
     content: "FILM · MUSIC · BOOKS";
-    display: block;
+    display: block;  
     font-size: 10px;
     letter-spacing: 0.1em;
     color: var(--text-muted);
@@ -105,8 +105,11 @@ body {
 .SideNav-item {
     padding: 24px 0;
     margin-bottom: 0;
-    border-bottom: 1px solid var(--border-light);
-    border-radius: 0;
+    /* border-bottom: 1px solid var(--border-light);
+    border-radius: 0; 需要边框时启用 */
+    border: none;       /* 去掉边框 */
+    border-radius: 8px;
+    background: transparent;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -114,23 +117,30 @@ body {
 .SideNav-item::before {
     content: "";
     position: absolute;
-    left: -20px;
+    /*left: -20px;
     top: 50%;
     width: 0;
     height: 1px;
     background: var(--accent);
+    transform: translateY(-50%);    需要边框时启用 */
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--bg-subtle), transparent);
+    border-radius: 8px;
     transition: width 0.4s ease;
-    transform: translateY(-50%);
+    z-index: -1;
 }
 
 .SideNav-item:hover {
-    background: transparent;
-    transform: translateX(12px);
-    padding-left: 8px;
+    /*background: transparent;
+    padding-left: 8px; 需要边框时启用 */
+    transform: translateX(8px);
 }
 
 .SideNav-item:hover::before {
-    width: 16px;
+    width: 50%;
 }
 
 /* 文章标题 - 优雅 */
