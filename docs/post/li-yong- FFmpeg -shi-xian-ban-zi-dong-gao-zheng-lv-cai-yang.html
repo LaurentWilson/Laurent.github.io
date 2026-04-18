@@ -308,7 +308,8 @@ var utterancesLoad=0;
 
 let themeSettings={
     "dark": ["dark","moon","#00f0ff","dark-blue"],
-    "light": ["light","sun","#ff5000","github-light"]
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
 };
 function changeTheme(mode, icon, color, utheme){
     document.documentElement.setAttribute("data-color-mode",mode);
@@ -318,7 +319,7 @@ function changeTheme(mode, icon, color, utheme){
 }
 function modeSwitch(){
     let currentMode=document.documentElement.getAttribute('data-color-mode');
-    let newMode = currentMode === "light" ? "dark" : "light";
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
     localStorage.setItem("meek_theme", newMode);
     if(themeSettings[newMode]){
         changeTheme(...themeSettings[newMode]);
@@ -442,6 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
-<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/LaurentWilson/Laurent.github.io@main/theme-override.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </html>
