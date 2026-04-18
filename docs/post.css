@@ -1,0 +1,437 @@
+/* ============================================
+   Laurent 的麻辣咖啡 - 文章页样式
+   电影 · 音乐 · 书籍
+   ============================================ */
+
+/* ============================================
+   配色方案 - 文艺冷淡风（复用 index.css 的变量）
+   ============================================ */
+:root {
+    --primary: #2c3e50;
+    --primary-light: #34495e;
+    --accent: #8b7355;
+    --accent-light: #a0826d;
+
+    --text-primary: #2c3e50;
+    --text-secondary: #5d6d7e;
+    --text-muted: #95a5a6;
+
+    --bg-warm: #faf9f7;
+    --bg-card: #ffffff;
+    --bg-subtle: #f5f3f0;
+
+    --border: #e8e4df;
+    --border-light: #f0ede9;
+
+    --cinematic: #1a1a2e;
+    --cinematic-light: #16213e;
+}
+
+/* ============================================
+   基础页面样式
+   ============================================ */
+body {
+    max-width: 800px;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", "STSong", serif;
+    font-size: 16px;
+    line-height: 1.85;
+    padding: 60px 40px;
+    background-color: var(--bg-warm);
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   顶部导航栏
+   ============================================ */
+#header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+/* 博客标题 */
+.postTitle {
+    font-family: "Noto Serif SC", serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    text-align: center;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.postTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+}
+
+/* ============================================
+   文章内容区域
+   ============================================ */
+#postBody {
+    font-size: 16.5px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    padding-top: 20px;
+}
+
+/* 文章中的标题 */
+#postBody h1,
+#postBody h2,
+#postBody h3 {
+    font-family: "Noto Serif SC", serif;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+#postBody h2 {
+    font-size: 20px;
+    border-left: none;
+    padding-left: 0;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+#postBody h2::before {
+    content: "§";
+    position: absolute;
+    left: -28px;
+    color: var(--accent);
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+#postBody h3 {
+    font-size: 17px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* 段落 */
+#postBody p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* 引用块 - 文艺感 */
+#postBody blockquote {
+    border-left: none;
+    padding: 24px 32px;
+    margin: 32px 0;
+    background: var(--bg-subtle);
+    border-radius: 4px;
+    position: relative;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+#postBody blockquote::before {
+    content: "\201c";
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    font-size: 48px;
+    color: var(--accent);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+#postBody blockquote p {
+    margin: 0;
+    text-align: left;
+}
+
+/* 代码块 */
+#postBody pre {
+    border-radius: 4px;
+    padding: 20px;
+    background: var(--cinematic);
+    border: 1px solid var(--border);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#postBody code {
+    background: var(--bg-subtle);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.88em;
+    color: var(--accent);
+    font-family: "SF Mono", Monaco, monospace;
+}
+
+/* 链接 */
+#postBody a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#postBody a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+#postBody a:hover::after {
+    width: 100%;
+}
+
+/* 列表 */
+#postBody ul,
+#postBody ol {
+    padding-left: 28px;
+    margin-bottom: 20px;
+}
+
+#postBody li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#postBody ul li::marker {
+    color: var(--accent);
+}
+
+/* 图片 */
+#postBody img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 28px 0;
+    filter: contrast(1.05);
+    transition: all 0.5s ease;
+}
+
+#postBody img:hover {
+    filter: contrast(1) brightness(1.02);
+}
+
+/* 表格 */
+#postBody table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+}
+
+#postBody th,
+#postBody td {
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+}
+
+#postBody th {
+    background: var(--bg-subtle);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* 分隔线 */
+#postBody hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 40px 0;
+}
+
+/* 强调文字 */
+#postBody strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* 斜体 */
+#postBody em {
+    color: var(--text-secondary);
+}
+
+/* 删除线 */
+#postBody del {
+    color: var(--text-muted);
+    text-decoration-color: var(--accent);
+}
+
+/* ============================================
+   页脚
+   ============================================ */
+#footer {
+    margin-top: 100px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+#footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer a:hover {
+    color: var(--accent);
+}
+
+/* ============================================
+   评论按钮
+   ============================================ */
+#cmButton {
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+#cmButton:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: transparent;
+}
+
+/* ============================================
+   动画效果 - 优雅克制
+   ============================================ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* ============================================
+   响应式设计
+   ============================================ */
+@media (max-width: 600px) {
+    body {
+        padding: 24px 20px;
+        font-size: 15px;
+    }
+
+    .postTitle {
+        font-size: 22px;
+    }
+
+    #postBody h2 {
+        font-size: 18px;
+    }
+
+    #postBody h2::before {
+        display: none;
+    }
+
+    #postBody blockquote {
+        padding: 20px 24px;
+    }
+}
+
+/* ============================================
+   暗色主题
+   ============================================ */
+[data-color-mode="dark"] {
+    --text-primary: #e8e6e3;
+    --text-secondary: #a8a5a0;
+    --text-muted: #6b6864;
+    --bg-warm: #1a1a1a;
+    --bg-card: #242424;
+    --bg-subtle: #2a2a2a;
+    --border: #3a3a3a;
+    --border-light: #333333;
+    --accent: #a0826d;
+    --accent-light: #b8a090;
+}
+
+[data-color-mode="dark"] body {
+    background-color: var(--bg-warm);
+}
+
+[data-color-mode="dark"] #postBody h2 {
+    border-bottom-color: var(--border);
+}
+
+[data-color-mode="dark"] #postBody h2::before {
+    color: var(--accent);
+}
+
+[data-color-mode="dark"] #postBody blockquote {
+    background: var(--bg-subtle);
+}
+
+[data-color-mode="dark"] #postBody pre {
+    background: #0d0d0d;
+    border-color: var(--border);
+}
+
+[data-color-mode="dark"] #postBody code {
+    background: var(--bg-subtle);
+}
+
+[data-color-mode="dark"] #cmButton {
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
+[data-color-mode="dark"] #cmButton:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ============================================
+   特殊效果
+   ============================================ */
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
