@@ -58,10 +58,10 @@ body {
 
 /* 博客标题 - 优雅字体 */
 .blogTitle {
-    font-family: "Noto Serif SC", serif;
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 0.15em;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     color: var(--text-primary);
     text-transform: uppercase;
 }
@@ -71,7 +71,7 @@ body {
     content: "FILM · MUSIC · BOOKS";
     display: block;
     font-size: 10px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
     color: var(--text-muted);
     margin-top: 8px;
     font-family: "Helvetica Neue", sans-serif;
